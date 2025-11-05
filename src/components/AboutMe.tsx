@@ -179,7 +179,7 @@ export const timeline = [
   {
     id: 2,
     company: 'Graduated from Sonoma State University',
-    title: 'Bachelor\'s of Science in Electrical Engineering',
+    title: 'Bachelor of Science in Electrical Engineering',
     location: 'Rohnert Park, CA',
     date: 'May 2015',
     datetime: '2015-05-01',
