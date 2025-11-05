@@ -68,6 +68,7 @@ export const timeline = [
     id: 10,
     company: 'Slalom Consulting',
     title: 'Independent Contract Employee',
+    location: 'Remote',
     date: 'December 2024',
     datetime: '2024-12-01',
     icon: LifebuoyIcon,
