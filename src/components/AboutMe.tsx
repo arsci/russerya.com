@@ -57,22 +57,28 @@ export const skills = [
 export const timeline = [
   {
     id: 11,
-    company: 'Launched Bright Wrench Design',
-    location: 'Sacramento, CA',
-    date: 'January 2024',
-    datetime: '2024-01-01',
-    icon: CubeTransparentIcon,
-    comment: "Newly launched this year, Bright Wrench Design is a small online shop for hobby products",
-    bullets: []
-  },
-  {
-    id: 10,
     company: 'Independent Consultant',
     location: 'Remote',
     date: 'January 2024',
     datetime: '2024-01-01',
     icon: CubeTransparentIcon,
-    comment: 'Independent AWS Cloud & DevOps Consultant'
+    comment: 'Launched Bright Wrench Design as an independent AWS Cloud & DevOps Consultant'
+  },
+  {
+    id: 10,
+    company: 'Slalom Consulting',
+    title: 'Independent Contract Employee',
+    location: 'Remote',
+    date: 'December 2024',
+    datetime: '2024-12-01',
+    icon: LifebuoyIcon,
+    bullets: [
+      "Contracted hourly independent project employee for Slalom Consulting",
+      "Worked closely with a large cryptocurrency client to migrate from an on-prem GitHub Enterprise Server (GHES) instance to a GitHub Enterprise Cloud Data Residency instance (GHEC)",
+      "Migrated complex GitHub Actions workflows from on-prem GHES to cloud-based GHEC",
+      "Updated internal systems and infrastructure to be compatible with cloud-based workflows",
+      "Assisted with designing and developing automated codebase migration tooling"
+    ]
   },
   {
     id: 9,
@@ -173,7 +179,7 @@ export const timeline = [
   {
     id: 2,
     company: 'Graduated from Sonoma State University',
-    title: 'Bachelor\'s of Science in Electrical Engineering',
+    title: 'Bachelor of Science in Electrical Engineering',
     location: 'Rohnert Park, CA',
     date: 'May 2015',
     datetime: '2015-05-01',
