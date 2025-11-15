@@ -65,29 +65,17 @@ export function PhoneFormStacked() {
               <input
                 id="phone-number"
                 name="phone"
-<<<<<<< HEAD
                 type="tel"
                 autoComplete="phone"
                 required
                 className="relative block w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-100 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 placeholder="12345678900"
                 pattern="((\+|00)?[1-9]{2}|0)[1-9]([0-9]){8}"
-=======
-                type="text"
-                autoComplete="phone"
-                required
-                className="relative block w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-100 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                placeholder="Phone Number"
->>>>>>> 9db50fa (add signup page)
                 disabled={status === "SUCCESS"}
                 onChange={toggleCaptchaVisible}
               />
               <input type="checkbox" required value="" className="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft" />
-<<<<<<< HEAD
               <label className="select-none ms-2 text-sm font-medium text-heading">By checking this box and submitting your phone number, you agree to receive SMS text messages from Bright Wrench Design for notification purposes. We store your information securely, and do not sell or share any information submitted through this site.</label>
-=======
-              <label className="select-none ms-2 text-sm font-medium text-heading">By checking this box and submitting your phone number, you agree to receive SMS text messages from Bright Wrench Design for notification purposes.</label>
->>>>>>> 9db50fa (add signup page)
             </div>
           </div>
         </div>
