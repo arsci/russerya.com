@@ -74,7 +74,7 @@ export function PhoneFormStacked() {
                 onChange={toggleCaptchaVisible}
               />
               <input type="checkbox" required value="" className="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft" />
-              <label className="select-none ms-2 text-sm font-medium text-heading">By checking this box and submitting your phone number, you agree to receive SMS text messages from Bright Wrench Design for notification purposes.</label>
+              <label className="select-none ms-2 text-sm font-medium text-heading">By checking this box and submitting your phone number, you agree to receive SMS text messages from Bright Wrench Design for notification purposes. We store your information securely, and do not sell or share any information submitted through this site.</label>
             </div>
           </div>
         </div>
