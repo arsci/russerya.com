@@ -64,22 +64,14 @@ export default function Home() {
           <div className="grid grid-cols-1">
             <div className='grid-cols-1'>
               <div className="grid grid-rows-1 font-bold text-4xl text-center mb-2 flex-wrap">
-                <p>Sign Up for notifications!</p>
+                <p>Sign Up for text messages!</p>
               </div>
               <div className="grid-rows-1 text-2xl text-center mt-6 mb-6">
-                <p>Sign up with your email or phone number to get notifications for new posts!</p>
+                <p>Sign up with your phone number to recieve marketing messages!</p>
               </div>
             </div>
           </div>
         <div className="w-full border-2 lines mt-4 mb-6" />
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 px-8 mb-10 gap-8 text-center items-center justify-center">
-          <div className="grid-cols-1 mb-4">
-            <div className="flow-root">
-              <div>
-                <NewsletterMain />
-              </div>
-            </div>
-          </div>
           <div className="grid-cols-1 mb-4">
             <div className="flow-root">
               <div>
@@ -89,6 +81,5 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
   )
 }

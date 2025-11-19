@@ -75,12 +75,12 @@ export function PhoneFormStacked() {
                 onChange={toggleCaptchaVisible}
               />
               <input type="checkbox" required value="" className=" w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft" />
-              <label className="mt-4 select-none ms-2 text-sm font-medium text-heading"> I would like to receive offers and news</label>
+              <label className="mt-4 select-none ms-2 text-sm font-medium text-heading"> I would like to receive marketing messages</label>
               <br></br>
               <input type="checkbox" required value="" className="justify-left w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft" />
               <label className="select-none ms-2 text-sm font-medium text-heading"> I accept the <a href="/terms" className="text-blue-600">Terms of Service</a> & <a href="/privacy" className="text-blue-600">Privacy Policy</a></label>
               
-              <p className="mt-5 text-sm">By providing your phone number and checking the above boxes, you agree to receive informational SMS text message notifications from Ryan Russell (Bright Wrench Design).<br></br> Message frequency will vary.<br></br> Message & data rates may apply.<br></br> Reply HELP for help or STOP to cancel.</p>
+              <p className="mt-5 text-sm text-center">By providing your phone number and checking the above boxes, you agree to receive marketing SMS text messages from Ryan Russell (Bright Wrench Design).<br></br> Message frequency will vary.<br></br> Message & data rates may apply.<br></br> Reply HELP for help or STOP to cancel.</p>
             </div>
           </div>
         </div>
@@ -149,11 +149,8 @@ export function PhoneMain() {
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-2 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900 dark:text-white">
-            Get notified of new posts!
-        </h2>
         <h4 className="text-center text-m leading-9 tracking-tight text-gray-900 dark:text-white">
-            Sign up to get text notifications!
+            Enter your phone number to sign up!
         </h4>
       </div>
       <PhoneFormStacked />
