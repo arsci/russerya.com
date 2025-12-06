@@ -86,7 +86,7 @@ export default function Home() {
             </div>
           </div>
         <div className="w-full border-2 lines mt-4 mb-8" />
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 mb-16 gap-12 items-center justify-center">
+        <div className="grid sm:grid-cols-1 md:grid-cols-1 mb-16 gap-12 items-center justify-center">
           <div className="grid-cols-1 mb-1">
             <div className="flow-root">
               <div>
@@ -101,33 +101,6 @@ export default function Home() {
               <div className="mt-4">
                 <p>In January of 2024 I launched Bright Wrench Design, a small online shop for hobby items that I&#39;ve created.</p>
               </div>
-            </div>
-          </div>
-          <div className="flow-root mx-14">
-            <div className="flex items-center justify-center">
-              <QuestionMarkCircleIcon className="h-16 mb-6 items-center justify-center" />
-            </div>
-            <p className="text-lg font-bold text-center mb-2">Looking for an AWS Pro?</p>
-            <p className="text-center mb-4">I am available for AWS Cloud and DevOps related projects!</p>
-            <div className="flex justify-center mb-2">
-              <a href='#'
-                onClick={() => setOpen(true)}
-              >
-                <button
-                  className="flex w-full justify-center rounded-md bg-indigo-600 px-10 py-3 font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Send me a message
-                </button>
-              </a>
-            </div>
-            <div className="flex justify-center">
-              <a href={process.env.NEXT_PUBLIC_CONSULT_URI} target="_blank">
-                <button
-                  className="flex w-full justify-center rounded-md bg-indigo-600 px-10 py-3 font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Schedule a consultation
-                </button>
-              </a>
             </div>
           </div>
         </div>

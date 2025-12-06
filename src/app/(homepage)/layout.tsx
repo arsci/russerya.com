@@ -2,7 +2,6 @@ import '../globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Header from '../../components/Header'
-import MessageBubble from '@/components/MessageBubble'
 import Footer from '../../components/Footer'
 import { Analytics } from '../../components/VercelAnalytics'
 import { ThemeProvider } from "../../components/ThemeProvider";
@@ -26,7 +25,6 @@ export default function RootLayout({
         <meta name="facebook-domain-verification" content="3v84x6tnl2ebgbx0atj2t8zvt5l582" />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          <MessageBubble />
           {children}
           <Footer />
         </ThemeProvider>
