@@ -4,7 +4,7 @@ import Image from "next/image"
 import { cn } from "@/utils/utils"
 import { Callout } from "@/components/Callout"
 import { MdxCard } from "@/components/MDXCard"
-import { getMDXComponent } from "next-contentlayer/hooks"
+import { getMDXComponent } from "next-contentlayer2/hooks"
 import { NewsletterFormStacked } from "./Newsletter"
 import { NewsletterSeries } from "./Newsletter"
 import { NewsletterCurious } from "./Newsletter"
@@ -66,7 +66,7 @@ const components = {
   ),
   p: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <p
-      className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
+      className={cn("leading-7 not-first:mt-6", className)}
       {...props}
     />
   ),
@@ -130,7 +130,7 @@ const components = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        "relative rounded px-[0.8rem] py-[0.2rem] font-mono text-sm",
+        "relative rounded-sm px-[0.8rem] py-[0.2rem] font-mono text-sm",
         className
       )}
       {...props}

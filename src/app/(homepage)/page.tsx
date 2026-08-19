@@ -1,7 +1,7 @@
 import { compareDesc } from "date-fns"
-import { allVanPosts } from 'contentlayer/generated'
-import { allTechPosts } from 'contentlayer/generated'
-import { allHomePosts } from 'contentlayer/generated'
+import { allVanPosts } from 'contentlayer2/generated'
+import { allTechPosts } from 'contentlayer2/generated'
+import { allHomePosts } from 'contentlayer2/generated'
 import { NewsletterMain } from "@/components/Newsletter"
 import Image from "next/image"
 import Link from "next/link"
@@ -119,7 +119,7 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        <div className='relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl'>
+        <div className='relative aspect-9/10 w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl'>
           <Image
             src='/images/index/nala.jpg'
             alt=""
@@ -129,7 +129,7 @@ function Photos() {
             className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
-        <div className='relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl'>
+        <div className='relative aspect-9/10 w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl'>
           <Image
             src='/images/index/board.jpg'
             alt=""
@@ -139,7 +139,7 @@ function Photos() {
             className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
-        <div className='relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl'>
+        <div className='relative aspect-9/10 w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl'>
           <Image
             src='/images/index/van.jpg'
             alt=""

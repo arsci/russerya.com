@@ -1,6 +1,6 @@
 'use client'
 import { compareDesc } from "date-fns"
-import { allVanPosts } from 'contentlayer/generated'
+import { allVanPosts } from 'contentlayer2/generated'
 import Link from "next/link";
 import { NewsletterMain } from "@/components/Newsletter";
  
@@ -17,7 +17,7 @@ export default function Home() {
         <div className="preview-cards-header-blog-pages">
           <h2 className="preview-cards-header-text">Van Build</h2>
           <p className="preview-cards-blog-pages-p">
-            In June 2023 we <a href="/blog/van/about-the-van" className="inline-links">purchased a 2023 Ford Transit</a> to convert into a camper. Our goal is to spend
+            In June 2023 we <Link href="/blog/van/about-the-van" className="inline-links">purchased a 2023 Ford Transit</Link> to convert into a camper. Our goal is to spend
             the following ~9 months building it out to be able to live and work out of it for 2-3 weeks at a time.
             We&#39;ll be documenting the process here through various blog posts, guides, and videos!
           </p>
