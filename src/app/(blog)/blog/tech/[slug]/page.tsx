@@ -85,6 +85,7 @@ export default async function Post({ params }: PostPageProps) {
                     day: 'numeric',
                     month: 'long',
                     year: 'numeric',
+                    timeZone: 'UTC',
                   })}
                 </time>
             </div>

@@ -56,6 +56,7 @@ export default function Home() {
                           day: 'numeric',
                           month: 'long',
                           year: 'numeric',
+                          timeZone: 'UTC',
                         })}
                       </time>
                     </div>
