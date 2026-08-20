@@ -56,12 +56,21 @@ export const skills = [
 
 export const timeline = [
   {
+    id: 12,
+    company: 'Trust & Will',
+    title: 'Staff Cloud Engineer',
+    location: 'Remote',
+    date: 'December 2025',
+    datetime: '2025-12-01',
+    icon: CubeTransparentIcon
+  },
+  {
     id: 11,
     company: 'Independent Consultant',
     location: 'Remote',
     date: 'January 2024',
     datetime: '2024-01-01',
-    icon: CubeTransparentIcon,
+    icon: LifebuoyIcon,
     comment: 'Launched Bright Wrench Design as an independent AWS Cloud & DevOps Consultant'
   },
   {
