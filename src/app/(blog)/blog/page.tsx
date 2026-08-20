@@ -4,6 +4,17 @@ import { allTechPosts } from 'contentlayer2/generated'
 import { allHomePosts } from 'contentlayer2/generated'
 import Link from "next/link"
 
+import type { Metadata } from 'next'
+import { pageMetadata } from '@/utils/seo'
+
+export const metadata: Metadata = pageMetadata({
+  title: 'Blog — Ryan Russell',
+  description:
+    'Writing on AWS, Terraform, DevOps and infrastructure, plus van build and home project logs.',
+  path: '/blog',
+})
+
+
 export default function Home() {
 
   const posts = [...allHomePosts,...allTechPosts,...allVanPosts]

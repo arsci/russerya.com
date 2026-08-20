@@ -1,3 +1,13 @@
+import type { Metadata } from 'next'
+import { pageMetadata } from '@/utils/seo'
+
+export const metadata: Metadata = pageMetadata({
+  title: 'Privacy Policy — Ryan Russell',
+  description:
+    'Privacy policy for Bright Wrench Design and russerya.com.',
+  path: '/privacy',
+})
+
 export default function Home() {
   return (
     <div>

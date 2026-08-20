@@ -1,5 +1,6 @@
 import '../globals.css'
 import type { Metadata } from 'next'
+import { pageMetadata } from '@/utils/seo'
 import { Inter } from 'next/font/google'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
@@ -8,10 +9,12 @@ import { ThemeProvider } from "../../components/ThemeProvider";
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'Ryan Russell',
-  description: 'Ryan Russell',
-}
+export const metadata: Metadata = pageMetadata({
+  title: 'Ryan Russell — Cloud & DevOps Engineer',
+  description:
+    'Cloud and DevOps engineer in Sacramento, California. 7x AWS certified, specialising in AWS, Terraform and Infrastructure as Code.',
+  path: '/',
+})
 
 export default function RootLayout({
   children,
