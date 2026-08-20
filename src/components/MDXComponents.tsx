@@ -1,5 +1,6 @@
 'use client'
 import * as React from "react"
+import { useMemo } from "react"
 import Image from "next/image"
 import { cn } from "@/utils/utils"
 import { Callout } from "@/components/Callout"
@@ -149,7 +150,10 @@ interface MdxProps {
 }
 
 export function Mdx({ code }: MdxProps) {
-  const Component = getMDXComponent(code)
+  // getMDXComponent builds a component from the compiled MDX at runtime, so it
+  // cannot be hoisted out of render the way the lint rule wants. useMemo keeps
+  // it stable for a given `code`, which is the best available guarantee here.
+  const Component = useMemo(() => getMDXComponent(code), [code])
 
   return (
     <div className="mdx">
