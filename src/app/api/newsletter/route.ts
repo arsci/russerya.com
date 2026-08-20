@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import axios from 'axios';
 
 export async function POST(req: NextRequest) {
 	const body = await req.json();
@@ -17,12 +16,23 @@ export async function POST(req: NextRequest) {
 	const email = body.email;
 
 	const CAPTCHA_SECRET_KEY = process.env.RECAPTCHA_V2_SECRET_KEY
-	const CAPTCHA_ENDPOINT = `https://www.google.com/recaptcha/api/siteverify?secret=${CAPTCHA_SECRET_KEY}&response=${body.captchaValue}`
+	const CAPTCHA_ENDPOINT = "https://www.google.com/recaptcha/api/siteverify"
 
 	try {
-		const responseCaptcha = await axios.post(CAPTCHA_ENDPOINT)
-	
-		if(responseCaptcha.data.success) {
+		// Send the secret in the POST body, not the query string, so it does not
+		// end up in proxy/access logs or referrer headers.
+		const responseCaptcha = await fetch(CAPTCHA_ENDPOINT, {
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: new URLSearchParams({
+				secret: CAPTCHA_SECRET_KEY ?? "",
+				response: body.captchaValue ?? "",
+			}),
+		})
+
+		const captchaResult = await responseCaptcha.json()
+
+		if (captchaResult.success) {
 			const data = {
 				api_key: EO_KEY,
 				email_address: email,

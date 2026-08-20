@@ -1,14 +1,12 @@
 'use client'
 import { ArrowPathIcon } from '@heroicons/react/20/solid'
 import { useRef, useState } from 'react'
-import { useSearchParams } from 'next/navigation'
 import ReCAPTCHA from 'react-google-recaptcha'; 
 
 export function NewsletterFormStacked() {
 
   const recaptcha = useRef(null) as any
   const [status, setStatus] = useState<string | null>(null)
-  const referrer = useSearchParams().get('referrer') || 'unknown/direct'
   const CAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_CAPTCHA_V2_SITE_KEY ?? ''
 
   const [isCaptchaVisible, setCaptchaVisible] = useState(false);
@@ -23,6 +21,9 @@ export function NewsletterFormStacked() {
     const form = event.target
 
     const captchaValue = recaptcha.current.getValue()
+
+    const referrer =
+      new URLSearchParams(window.location.search).get('referrer') || 'unknown/direct'
 
     const payload = {
       email: form.email.value,
@@ -86,7 +87,7 @@ export function NewsletterFormStacked() {
               )}
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Sign up
               </button>
@@ -97,7 +98,7 @@ export function NewsletterFormStacked() {
               <button
                 disabled={true}
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-xs focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Success! Welcome to the email list!
               </button>
@@ -108,7 +109,7 @@ export function NewsletterFormStacked() {
               <button
                 disabled={true}
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-indigo-200 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-indigo-200 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-xs focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 <ArrowPathIcon className="h-6 items-center justify-center" />
               </button>
@@ -123,7 +124,7 @@ export function NewsletterFormStacked() {
               )}
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-xs focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Oops! Either you&#39;re already subscribed,<br />
                 or there was another failure. You may try again.

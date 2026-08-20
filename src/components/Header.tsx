@@ -21,7 +21,7 @@ export default function Header() {
        <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 justify-between">
-                <div className="flex flex-shrink-0 items-center">
+                <div className="flex shrink-0 items-center">
                   <Link href="/">
                     <Image 
                       src="/favicon.ico"
@@ -48,7 +48,7 @@ export default function Header() {
                       className={
                         nav
                           ? 'absolute sm:hidden pt-6 left-0 top-16 w-[60%] h-full bg-white dark:bg-gray-700 ease-in-out duration-100 z-50'
-                          : 'ease-in-out w-[60%] duration-100 absolute top-0 bottom-0 left-[-100%] z-50'
+                          : 'ease-in-out w-[60%] duration-100 absolute top-0 bottom-0 -left-full z-50'
                       }>
                         {Nav.navigation.map((item) => (
                         <div key={item.name} className="pb-6 ml-6">

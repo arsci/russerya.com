@@ -1,5 +1,5 @@
 import { compareDesc } from "date-fns"
-import { allHomePosts } from 'contentlayer/generated'
+import { allHomePosts } from 'contentlayer2/generated'
 import Link from "next/link";
  
 export default function Home() {

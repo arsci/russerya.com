@@ -2,8 +2,7 @@
 import { RocketLaunchIcon, ArrowPathIcon } from '@heroicons/react/20/solid'
 import { NewsletterMain } from "@/components/Newsletter"
 import { PhoneMain } from "@/components/Phone"
-import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState, useRef } from 'react'
+import { useState, useRef } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'; 
 import Image from 'next/image';
 import Link from 'next/link';

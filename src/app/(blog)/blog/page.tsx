@@ -1,7 +1,7 @@
 import { compareDesc } from "date-fns"
-import { allVanPosts } from 'contentlayer/generated'
-import { allTechPosts } from 'contentlayer/generated'
-import { allHomePosts } from 'contentlayer/generated'
+import { allVanPosts } from 'contentlayer2/generated'
+import { allTechPosts } from 'contentlayer2/generated'
+import { allHomePosts } from 'contentlayer2/generated'
 import Link from "next/link"
 
 export default function Home() {

@@ -5,14 +5,14 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { absoluteUrl } from '@/utils/utils'
 import { Mdx } from '@/components/MDXComponents'
-import { allHomePosts } from 'contentlayer/generated'
+import { allHomePosts } from 'contentlayer2/generated'
 import ReturnButton from '@/components/ReturnButton'
 import { NewsletterMain } from '@/components/Newsletter'
 
 interface PostPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 async function getPostFromParams(params: { slug: string }) {
@@ -28,7 +28,7 @@ async function getPostFromParams(params: { slug: string }) {
 export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
-  const post = await getPostFromParams(params)
+  const post = await getPostFromParams(await params)
 
   if (!post) {
     return {}
@@ -67,10 +67,10 @@ export async function generateMetadata({
   }
 }
 
-export default async function Post({ params }: { params: { slug: string } }) {
+export default async function Post({ params }: PostPageProps) {
   
-  const post = await getPostFromParams(params)
-  
+  const post = await getPostFromParams(await params)
+
   if (!post) notFound()
 
   const ogImage = `/images/blog/home/${post.ogImage}`
