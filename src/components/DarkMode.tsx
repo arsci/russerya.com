@@ -1,16 +1,20 @@
 'use client'
 import { useTheme } from 'next-themes'
-import { useState, useEffect } from 'react'
+import { useSyncExternalStore } from 'react'
 import { SunIcon } from './LinksAndIcons'
 import { MoonIcon } from './LinksAndIcons'
 
-export const DarkModeSwitcher = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+// Stable no-op subscription: the value never changes after hydration, so this
+// just reports "am I on the client yet" without a setState-in-effect cascade.
+const emptySubscribe = () => () => {};
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+export const DarkModeSwitcher = () => {
+  const { theme, setTheme } = useTheme();
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
 
   if (!mounted) {
     return null;
