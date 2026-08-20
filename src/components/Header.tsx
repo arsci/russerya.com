@@ -24,10 +24,10 @@ export default function Header() {
                 <div className="flex shrink-0 items-center">
                   <Link href="/">
                     <Image 
-                      src="/favicon.ico"
-                      width={100}
-                      height={100}
-                      alt="favicon"
+                      src="/images/profile.jpg"
+                      width={80}
+                      height={80}
+                      alt="Ryan Russell"
                       className="inline-block h-10 w-10 rounded-full"
                     />
                   </Link>
