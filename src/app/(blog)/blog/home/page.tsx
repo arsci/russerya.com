@@ -1,6 +1,17 @@
 import { compareDesc } from "date-fns"
 import { allHomePosts } from 'contentlayer2/generated'
 import Link from "next/link";
+
+import type { Metadata } from 'next'
+import { pageMetadata } from '@/utils/seo'
+
+export const metadata: Metadata = pageMetadata({
+  title: 'Home Projects — Ryan Russell',
+  description:
+    'Home automation, electronics and maker project write-ups.',
+  path: '/blog/home',
+})
+
  
 export default function Home() {
 

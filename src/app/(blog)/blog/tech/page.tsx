@@ -1,6 +1,17 @@
 import { compareDesc } from "date-fns"
 import { allTechPosts } from 'contentlayer2/generated'
 import Link from "next/link";
+
+import type { Metadata } from 'next'
+import { pageMetadata } from '@/utils/seo'
+
+export const metadata: Metadata = pageMetadata({
+  title: 'Tech Blog — Ryan Russell',
+  description:
+    'Posts on AWS, Terraform, networking and infrastructure by Ryan Russell, 7x AWS certified cloud engineer.',
+  path: '/blog/tech',
+})
+
  
 export default function Home() {
 

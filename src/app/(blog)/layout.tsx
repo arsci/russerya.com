@@ -1,5 +1,6 @@
 import '../globals.css'
 import type { Metadata } from 'next'
+import { pageMetadata } from '@/utils/seo'
 import { Inter } from 'next/font/google'
 import Header from '../../components/Header'
 import Footer from '../../components/FooterBlog'
@@ -10,10 +11,12 @@ import { GoogleTagManager } from '@next/third-parties/google'
 const inter = Inter({ subsets: ['latin'] })
 const GTMID = process.env.NEXT_PUBLIC_GTMID ?? ''
 
-export const metadata: Metadata = {
-  title: 'Ryan Russell',
-  description: 'Ryan Russell',
-}
+export const metadata: Metadata = pageMetadata({
+  title: 'Blog — Ryan Russell',
+  description:
+    'Writing on AWS, Terraform, DevOps and infrastructure, plus van build and home project logs.',
+  path: '/blog',
+})
 
 export default function RootLayout({
   children,
