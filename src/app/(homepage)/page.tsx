@@ -66,7 +66,7 @@ export default function Home() {
                 Ryan Russell
               </div>
               <div className="grid-rows-1 font-bold text-xl text-left">
-                Staff Cloud Engineer, AWS Specialist, <br className="lg:hidden" />DevOps Guru, <br className="lg:hidden" />Hobbyist
+                Staff Cloud Engineer, <br className="lg:hidden" />AWS Specialist, <br className="lg:hidden" />DevOps Guru, <br className="lg:hidden" />Hobbyist
               </div>
             </div>
             <div className='grid-cols-1'>
