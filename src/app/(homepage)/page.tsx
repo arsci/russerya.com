@@ -96,7 +96,7 @@ export default function Home() {
                 <p>I spent 3 years as a consultant with Slalom and gained a lot of experience working with a wide range of clients across several highly regulated industries.</p>
               </div>
               <div className="mt-4">
-                <p>My focus lately has been on independent consulting projects, working closely with technology companies to design and build out critical AWS infrastructure.</p>
+                <p>I then spent time on independent consulting projects, working closely with technology companies to design and build out critical AWS infrastructure. Today I am a Staff Cloud Engineer at Trust &amp; Will.</p>
               </div>
               <div className="mt-4">
                 <p>In January of 2024 I launched Bright Wrench Design, a small online shop for hobby items that I&#39;ve created.</p>
