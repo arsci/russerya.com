@@ -62,7 +62,14 @@ export const timeline = [
     location: 'Remote',
     date: 'December 2025',
     datetime: '2025-12-01',
-    icon: CubeTransparentIcon
+    icon: CubeTransparentIcon,
+    bullets: [
+      "Set and own technical direction for the multi-account AWS platform behind a product used by 1M+ users",
+      "Built the Terraform module strategy, policy checks, and self-service provisioning standards that let squads ship without re-solving security, networking, and cost architecture",
+      "Moved cloud access off long-lived credentials to OIDC federation, tightened IAM to least privilege, and standardized monitoring and incident readiness across services, supporting SOC 2 controls",
+      "Surface infrastructure risk to engineering and security leadership as business tradeoffs. Mentor engineers on cloud architecture, IaC, and DevSecOps",
+      "Use AI-assisted tooling heavily in daily platform work to build internal tooling and automate infrastructure workflows while keeping human review on security and architecture decisions"
+    ]
   },
   {
     id: 11,
