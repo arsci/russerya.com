@@ -10,6 +10,18 @@ const nextConfig = {
     minimumCacheTTL: 2592000, // 30 days
   },
 
+  async redirects() {
+    return [
+      {
+        // /about-me is now the site root. It was previously indexed and may be
+        // linked externally, so redirect permanently rather than 404.
+        source: '/about-me',
+        destination: '/',
+        permanent: true,
+      },
+    ]
+  },
+
   async headers() {
     return [
       {

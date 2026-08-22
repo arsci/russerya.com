@@ -14,7 +14,8 @@ export const metadata: Metadata = pageMetadata({
   title: 'Ryan Russell — Cloud & DevOps Engineer',
   description:
     'Cloud and DevOps engineer in Sacramento, California. 7x AWS certified, ' +
-    'specialising in AWS, Terraform and Infrastructure as Code.',
+    'specialising in AWS, Terraform and Infrastructure as Code. Staff Cloud ' +
+    'Engineer at Trust & Will, previously Gruntwork, Slalom and PG&E.',
   path: '/',
 })
 

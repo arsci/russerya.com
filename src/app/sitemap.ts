@@ -6,7 +6,7 @@ import { siteUrl } from '@/utils/seo'
 // for A2P 10DLC vetting, not content meant to be found via search.
 const staticRoutes: { path: string; priority: number }[] = [
   { path: '/', priority: 1.0 },
-  { path: '/about-me', priority: 0.9 },
+  { path: '/home', priority: 0.9 },
   { path: '/blog', priority: 0.8 },
   { path: '/blog/tech', priority: 0.7 },
   { path: '/blog/van', priority: 0.7 },
